@@ -38,7 +38,7 @@ class MqttCamera():
     def on_connect(self, client, userdata, flags, rc):
         print("connect.." + str(rc))
         if rc == 0:
-            client.subscribe("eyeson/ruuid")
+            client.subscribe("eyeson/raspberryPi1")
         else:
             print("연결실패")
 

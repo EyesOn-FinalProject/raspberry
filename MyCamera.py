@@ -26,11 +26,10 @@ class Camera():
     @classmethod
     def streaming(c):
         with picamera.PiCamera() as camera:
-            camera.resolution = (320,240) # 해상도
+            camera.resolution = (320,240) # 해상도  
             camera.hflip = True #뒤집는거
             camera.vflip = True
 
-            camera.start_preview()
             time.sleep(2)
 
             stream = io.BytesIO()
